@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import static android.R.attr.data;
@@ -60,21 +62,66 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
 
 
+        TextView timer = (TextView)findViewById(R.id.timer);
+
+        ImageView window = (ImageView) findViewById(R.id.imageView);
+
+
         Toast.makeText(getApplicationContext(),
-                "Hi I am a simple Toast", Toast.LENGTH_LONG).show();
+                "Seems to be working", Toast.LENGTH_LONG).show();
 
         switch (view.getId()) {
 
             case R.id.button1:
-                // code for button when user clicks buttonOne.
+                timer.setText("01:00");
                 break;
 
+            case R.id.button2:
+                timer.setText("02:00");
+                break;
 
+            case R.id.button3:
+                timer.setText("03:00");
+                break;
+
+            case R.id.button4:
+                timer.setText("04:00");
+                break;
+
+            case R.id.button5:
+                timer.setText("05:00");
+                break;
+
+            case R.id.button6:
+                timer.setText("06:00");
+                break;
+
+            case R.id.button7:
+                timer.setText("07:00");
+                break;
+
+            case R.id.button8:
+                timer.setText("08:00");
+                break;
+
+            case R.id.button9:
+                timer.setText("09:00");
+                break;
+
+            case R.id.button0:
+                timer.setText("00:00");
+                break;
+
+            case R.id.buttonStart:
+                window.setImageResource(R.mipmap.ic_launcher);
+                break;
+
+            case R.id.buttonStop:
+                window.setImageBitmap(null);
+                break;
 
             default:
                 break;
         }
-
-
     }
 };
