@@ -1,3 +1,6 @@
+//Matthew DeAscanis
+//CIS 282-401
+
 package edu.dtcc.matt.microwave5;
 
 import android.support.v7.app.AppCompatActivity;
@@ -67,8 +70,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ImageView window = (ImageView) findViewById(R.id.imageView);
 
 
-        Toast.makeText(getApplicationContext(),
-                "Seems to be working", Toast.LENGTH_LONG).show();
+
+        //delete
+        //Toast.makeText(getApplicationContext(),
+           //     "Seems to be working", Toast.LENGTH_LONG).show();
 
         switch (view.getId()) {
 
@@ -113,11 +118,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.buttonStart:
-                window.setImageResource(R.mipmap.ic_launcher);
+                window.setImageResource(R.mipmap.popped_corn);
                 break;
 
             case R.id.buttonStop:
-                window.setImageBitmap(null);
+                window.setImageResource(R.mipmap.kernels);
                 break;
 
             default:
